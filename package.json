@@ -8,8 +8,7 @@
     "build": "tsc",
     "postinstall": "tsc",
     "dev":  "nodemon ./public/index.js",
-    "test": "jest",
-    "deploy": "git add . && git commit -m Heroku && git push heroku main"
+    "test": "jest"
     },
   "private": true,
   "dependencies": {
