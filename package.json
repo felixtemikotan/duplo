@@ -2,8 +2,26 @@
   "name": "fastify",
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
+  "scripts": {
+    "compile": "tsc -w",
+    "start": "nodemon ./public/index.js",
+    "build": "tsc",
+    "postinstall": "tsc",
+    "dev":  "nodemon ./public/index.js",
+    "test": "jest",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main"
+    },
   "private": true,
   "dependencies": {
-    "fastify": "^4.25.2"
+    "@prisma/client": "^5.9.1",
+    "@types/node": "^20.11.16",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "fastify": "^4.25.2",
+    "joi": "^17.12.1",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
   }
 }

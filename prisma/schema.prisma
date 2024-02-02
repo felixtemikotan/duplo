@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://default:aEZ7hAMBVLW2@ep-young-field-a4sxtk9e.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+}
+
+model BlogPost {
+  id String @id @default(cuid())
+  title String @unique
+  content String
+  author String
+  dateCreated DateTime   @default(now())
+  dateUpdated DateTime   @updatedAt
+}
