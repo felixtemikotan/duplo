@@ -185,7 +185,7 @@ blogController.deletePost = async (req: { params: { id: any; }; }, reply: any) =
 // Controller ends here
 
 // Routes starts here
-const routes = [{
+ const routes = [{
         method: 'GET',
         url: '/api/get-all-blog-posts',
         handler: blogController.getAllPosts
@@ -216,7 +216,10 @@ const routes = [{
         handler: blogController.deletePost
     }
 ];
+
 // Routes ends here
 routes.forEach((route:any, index:any) => {
   app.route(route)
 })
+
+module.exports = routes

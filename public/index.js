@@ -214,3 +214,4 @@ const routes = [{
 routes.forEach((route, index) => {
     app.route(route);
 });
+module.exports = routes;
